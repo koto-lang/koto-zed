@@ -1,0 +1,16 @@
+id = "koto-zed"
+name = "koto-zed"
+description = "Support for Koto in Zed"
+version = "0.0.1"
+schema_version = 1
+authors = ["Roberto Saccon"]
+repository = "https://github.com/rsaccon/koto-zed"
+
+[grammars.koto]
+repository = "https://github.com/koto-lang/tree-sitter-koto"
+commit = "4d1b37bd19f27b797dbc1d5544db193feabd24ed"
+
+
+# [language_servers.koto_ls]
+# name = "KotoLs"
+# languages = []
