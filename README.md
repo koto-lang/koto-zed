@@ -9,10 +9,6 @@ Support for Koto in Zed
 - Code Folding
 - Zed commands: `Go to Definition`, `Find all references`, `Rename Symbol` (these work fine in pure Koto scripts)
 
-## To troubleshoot (when koto script uses anything defined in Rust)
-- Zed commands `Go to Definition` and `Find all references` silently fail
-- Zed command `Rename Symbol` cause the following error notification: `Error: Prepare rename via koto_ls failed: No reference found at position`
-
 ## To add
 - Outline (whatever I tried to put into `languages/koto/outline.scm` just made the extension not working anymore at all)
 - Autoformat (has to be implemented at the language server)
