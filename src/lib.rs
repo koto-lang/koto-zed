@@ -28,17 +28,18 @@ impl KotoZedExtension {
             &zed::LanguageServerInstallationStatus::CheckingForUpdate,
         );
         let release = zed::latest_github_release(
-            "koto-lang/koto-ls",
+            // "koto-lang/koto-ls",
+            "rsaccon/koto-ls", // TEMPORARY
             zed::GithubReleaseOptions {
                 require_assets: true,
-                pre_release: false,
+                // pre_release: false,
+                pre_release: true, // TEMPORARY
             },
         )?;
 
         let (platform, arch) = zed::current_platform();
         let asset_name = format!(
-            "koto-ls-{version}-{arch}-{os}.tar.gz",
-            version = release.version,
+            "koto-ls-{arch}-{os}.tar.gz",
             arch = match arch {
                 zed::Architecture::Aarch64 => "aarch64",
                 zed::Architecture::X86 => "x86",
