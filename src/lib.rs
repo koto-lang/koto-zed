@@ -39,7 +39,7 @@ impl KotoZedExtension {
 
         let (platform, arch) = zed::current_platform();
         let asset_name = format!(
-            "koto-ls-{arch}-{os}.tar.gz",
+            "koto-ls-{arch}-{os}.{extension}",
             arch = match arch {
                 zed::Architecture::Aarch64 => "aarch64",
                 zed::Architecture::X86 => "x86",
@@ -50,6 +50,10 @@ impl KotoZedExtension {
                 zed::Os::Linux => "unknown-linux-musl",
                 zed::Os::Windows => "pc-windows-msvc",
             },
+            extension = match platform {
+                zed::Os::Mac | zed::Os::Linux => "tar.gz",
+                zed::Os::Windows => "zip",
+            }
         );
 
         let asset = release
@@ -70,7 +74,10 @@ impl KotoZedExtension {
             zed::download_file(
                 &asset.download_url,
                 &version_dir,
-                zed::DownloadedFileType::GzipTar,
+                match platform {
+                    zed::Os::Mac | zed::Os::Linux => zed::DownloadedFileType::GzipTar,
+                    zed::Os::Windows => zed::DownloadedFileType::Zip,
+                },
             )
             .map_err(|e| format!("failed to download file: {e}"))?;
 
