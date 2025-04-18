@@ -28,12 +28,10 @@ impl KotoZedExtension {
             &zed::LanguageServerInstallationStatus::CheckingForUpdate,
         );
         let release = zed::latest_github_release(
-            // "koto-lang/koto-ls",
-            "rsaccon/koto-ls", // TEMPORARY
+            "koto-lang/koto-ls",
             zed::GithubReleaseOptions {
                 require_assets: true,
-                // pre_release: false,
-                pre_release: true, // TEMPORARY
+                pre_release: false, // TODO: make this configurable in settings
             },
         )?;
 

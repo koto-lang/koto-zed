@@ -9,12 +9,14 @@ Support for Koto in Zed
 - Code Folding
 - Zed commands: `Go to Definition`, `Find all references`, `Rename Symbol` (these work fine in pure Koto scripts)
 
-## To add
-- Outline (whatever I tried to put into `languages/koto/outline.scm` just made the extension not working anymore at all)
-- Autoformat (has to be implemented at the language server)
+## Maybe comig sson
+- Outline (in theory, easy to add, but whatever treesitter query I try to put into `languages/koto/outline.scm` just makes the extension not working anymore at all)
 
-## Nice to have, later on
-- Hover (Not supported yet by Koto language server, not sure whether it is supported by zed for extensions and also there is no doc format spec for Koto)
+## Being worked on, but still at very, very early stage
+- Hover
+- Custom settings (e.g.: enable/disble download and installation of pre-release versions of the language server)
+- Making langauag server aware of what is made available to Koto runtime via Rust API
+- Autoformat
 
 ## Installation (as Zed Dev Extension for now)
 If no locally installed language server `koto-ls` binary gets detected, the extension will try to automatically download and install the latest version of the language server from Github.
