@@ -18,7 +18,9 @@ Support for Koto in Zed
 - Making langauag server aware of what is made available to Koto runtime via Rust API
 - Autoformat
 
+## Language server
+The extension will make use of `koto-ls` if it's available in your path, otherwise it will try to download and install the latest version from Github.
+
 ## Installation (as Zed Dev Extension for now)
-If no locally installed language server `koto-ls` binary gets detected, the extension will try to automatically download and install the latest version of the language server from Github.
 1. Download and unzip koto-zed: https://github.com/rsaccon/koto-zed/archive/refs/heads/main.zip
 2. Install Dev Extension (from Command Palette or Menu `Zed > Extensions`)
