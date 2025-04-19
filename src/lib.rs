@@ -1,10 +1,33 @@
 use std::fs;
 use zed::LanguageServerId;
 use zed_extension_api::process::Command;
+use zed_extension_api::settings::LspSettings;
 use zed_extension_api::{self as zed, Result};
 
 struct KotoZedExtension {
     cached_binary_path: Option<String>,
+}
+
+impl zed::Extension for KotoZedExtension {
+    fn new() -> Self {
+        Self {
+            cached_binary_path: None,
+        }
+    }
+
+    fn language_server_command(
+        &mut self,
+        language_server_id: &LanguageServerId,
+        worktree: &zed::Worktree,
+    ) -> Result<Command> {
+        let command = self.language_server_binary_path(language_server_id, worktree)?;
+        println!("starting koto-ls: {}", command); // TEMPORARY
+        Ok(zed::Command {
+            command,
+            args: vec![],
+            env: Default::default(),
+        })
+    }
 }
 
 impl KotoZedExtension {
@@ -13,6 +36,18 @@ impl KotoZedExtension {
         language_server_id: &LanguageServerId,
         worktree: &zed::Worktree,
     ) -> Result<String> {
+        let mut pre_release = false;
+        if let Some(settings) = LspSettings::for_worktree("koto-ls", worktree)
+            .ok()
+            .and_then(|lsp_settings| lsp_settings.settings)
+        {
+            if let Some(val) = settings.get("pre_release") {
+                if let Some(val) = val.as_bool() {
+                    pre_release = val;
+                }
+            }
+        }
+
         if let Some(path) = worktree.which("koto-ls") {
             return Ok(path);
         }
@@ -31,7 +66,7 @@ impl KotoZedExtension {
             "koto-lang/koto-ls",
             zed::GithubReleaseOptions {
                 require_assets: true,
-                pre_release: false, // TODO: make this configurable in settings
+                pre_release,
             },
         )?;
 
@@ -91,27 +126,6 @@ impl KotoZedExtension {
 
         self.cached_binary_path = Some(binary_path.clone());
         Ok(binary_path)
-    }
-}
-
-impl zed::Extension for KotoZedExtension {
-    fn new() -> Self {
-        Self {
-            cached_binary_path: None,
-        }
-    }
-
-    fn language_server_command(
-        &mut self,
-        language_server_id: &LanguageServerId,
-        worktree: &zed::Worktree,
-    ) -> Result<Command> {
-        println!("hello from language_server_command");
-        Ok(zed::Command {
-            command: self.language_server_binary_path(language_server_id, worktree)?,
-            args: vec!["lsp".to_string()], // TODO: are there args for kptp-ls ?
-            env: Default::default(),
-        })
     }
 }
 

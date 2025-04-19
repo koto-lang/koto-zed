@@ -7,20 +7,27 @@ Support for Koto in Zed
 - Comment toggeling
 - Auto-closing brackets
 - Code Folding
-- Zed commands: `Go to Definition`, `Find all references`, `Rename Symbol` (these work fine in pure Koto scripts)
-
-## Maybe comig sson
-- Outline (in theory, easy to add, but whatever treesitter query I try to put into `languages/koto/outline.scm` just makes the extension not working anymore at all)
-
-## Being worked on, but still at very, very early stage
-- Hover
-- Custom settings (e.g.: enable/disble download and installation of pre-release versions of the language server)
-- Making langauag server aware of what is made available to Koto runtime via Rust API
-- Autoformat
+- Zed commands: `Go to Definition`, `Find all references`, `Rename Symbol`
 
 ## Language server
-The extension will make use of `koto-ls` if it's available in your path, otherwise it will try to download and install the latest version from Github.
+The extension will make use of `koto-ls` if it's available in your path, otherwise it will try to download and install the latest release from Github. If you want to use pre-releases (if available), then you have
+to enable it in the `lsp` section of your `settings.json`:
+```
+"lsp": {
+  "koto-ls": {
+    "settings": {
+      "pre_release": true
+    }
+  }
+}
+```
 
 ## Installation (as Zed Dev Extension for now)
 1. Download and unzip koto-zed: https://github.com/rsaccon/koto-zed/archive/refs/heads/main.zip
 2. Install Dev Extension (from Command Palette or Menu `Zed > Extensions`)
+
+## Roadmap
+- Outline
+- Hover
+- Making langauag server aware of what is made available to Koto runtime via Rust API
+- Autoformat
