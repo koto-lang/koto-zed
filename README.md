@@ -10,7 +10,7 @@ Support for Koto in Zed
 - Zed commands: `Go to Definition`, `Find all references`, `Rename Symbol`
 
 ## Language server
-The extension will make use of `koto-ls` if it's available in your path, otherwise it will try to download and install the latest release from Github. If you want to use pre-releases (if available), then you have
+The extension will make use of `koto-ls` if it's available in your path, otherwise it will try to download and install the latest release from Github. If you want to use latest pre-release (if available), then you have
 to enable it in the `lsp` section of your `settings.json`:
 ```
 "lsp": {
