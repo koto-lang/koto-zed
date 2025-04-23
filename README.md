@@ -10,7 +10,7 @@ Support for Koto in Zed
 - Zed commands: `Go to Definition`, `Find all references`, `Rename Symbol`
 
 ## Language server
-The extension will make use of `koto-ls` if it's available in your path, otherwise it will try to download and install the latest release from Github. If you want to use pre-releases (if available), then you have
+The extension will make use of `koto-ls` if it's available in your path, otherwise it will try to download and install the latest release from Github. If you want to use latest pre-release (if available), then you have
 to enable it in the `lsp` section of your `settings.json`:
 ```
 "lsp": {
@@ -22,7 +22,8 @@ to enable it in the `lsp` section of your `settings.json`:
 }
 ```
 
-## Installation (as Zed Dev Extension for now)
+## Installation
+As Zed Dev Extension for now (once it is published to Zed extensions, it can be selected to be installed right from within the editor).
 1. Download and unzip koto-zed: https://github.com/rsaccon/koto-zed/archive/refs/heads/main.zip
 2. Install Dev Extension (from Command Palette or Menu `Zed > Extensions`)
 
