@@ -8,7 +8,7 @@ repository = "https://github.com/rsaccon/koto-zed"
 
 [grammars.koto]
 repository = "https://github.com/koto-lang/tree-sitter-koto"
-commit = "e602222ba63a353c43700f6eb3bfd4b098878695"
+commit = "1e610746f48c24607733fac158d5bae79accd845"
 
 [language_servers.koto_ls]
 name = "koto-ls"
