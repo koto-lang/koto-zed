@@ -4,7 +4,7 @@ a = 1
 
 b = 2
 
-a_funciton = |a:Number, b:Numer|
+a_function = |a:Number, b:Numer|
   print 1
   print 2
   print 3
