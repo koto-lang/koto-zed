@@ -7,6 +7,7 @@ Support for Koto in Zed
 - Comment toggeling
 - Auto-closing brackets
 - Code Folding
+- Outline Panel
 - Zed commands: `Go to Definition`, `Find all references`, `Rename Symbol`
 
 ## Language server
@@ -28,7 +29,6 @@ As Zed Dev Extension for now (once it is published to Zed extensions, it can be 
 2. Install Dev Extension (from Command Palette or Menu `Zed > Extensions`)
 
 ## Roadmap
-- Outline
 - Hover
 - Making langauag server aware of what is made available to Koto runtime via Rust API
 - Autoformat
