@@ -7,7 +7,7 @@ Support for Koto in Zed
 - Comment toggeling
 - Auto-closing brackets
 - Code Folding
-- Outline Panel
+- Outline Panel (only top level assignments for now)
 - Zed commands: `Go to Definition`, `Find all references`, `Rename Symbol`
 
 ## Language server
