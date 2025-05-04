@@ -1,0 +1,2 @@
+export add = |aa:Number, bb:Number| aa + bb
+export sub = |aa:Number, bb:Number| aa - bb
