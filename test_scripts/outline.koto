@@ -14,3 +14,8 @@ a_function = |a:Number, b:Number|
   print b
 
 a_function 1, 2
+
+let a_string: String = 'hello'
+let a_number: Number = || 123
+
+foo = || true
