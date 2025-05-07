@@ -12,6 +12,8 @@ else if    aa == 35
 else
   print "else"
 
+if bb == 33 then print "if" else print "else"
+
 if   bb == 33    then   print "if"    else  print "else"
 
 x = 0
@@ -35,8 +37,10 @@ a_function 1, 2
 b_function = |a:Number, b:Number| print "b"
 
 c_function = ||
+  print 1
+  print 2
 
-d_function= |a, b| -> Boolean
+d_function = |a, b| -> Boolean
   print 1
   print 2
   true
