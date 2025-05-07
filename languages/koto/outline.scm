@@ -2,14 +2,18 @@
 ; (assign
 ;     (identifier) @name) @item
 
-; Function assignments
+; function assignments
 (assign
     (identifier) @name
     "=" @context
     (function
-        (args))) @item
+        (args) @name
+        "->"? @context
+        (type (identifier))? @name
+    )
+) @item
 
-; Let function assignments
+; let function assignments
 (let_assign
     (variable
         (identifier) @name
@@ -18,5 +22,8 @@
     )
     "=" @context
     (function
-        (args)
-        )) @item
+        (args) @name
+        "->"? @context
+        (type (identifier))? @name
+    )
+) @item

@@ -1,10 +1,27 @@
 print "hello world"
 
-a = 1
+aa = 11
+bb = 22
 
-b = 2
+if    aa == 33
+  print "if"
+else if aa == 34
+  print "else if"
+else if    aa == 35
+  print "else if"
+else
+  print "else"
 
-a_function = |a:Number, b:Number|
+if   bb == 33    then   print "if"    else  print "else"
+
+x = 0
+while x < 5
+  x += 1
+
+for i in [1, 2]
+  print i
+
+a_function = |a:Number, b:Number| -> Null
   print 1
   print 2
   print 3
@@ -15,7 +32,14 @@ a_function = |a:Number, b:Number|
 
 a_function 1, 2
 
-let a_string: String = 'hello'
-let a_number: Number = || 123
+b_function = |a:Number, b:Number| print "b"
 
-foo = || true
+c_function = ||
+
+d_function= |a, b| -> Boolean
+  print 1
+  print 2
+  true
+
+let let_string: String = 'hello'
+let let_number_function: Number = || 123
