@@ -4,7 +4,7 @@ description = "Support for Koto in Zed"
 version = "0.0.1"
 schema_version = 1
 authors = ["Roberto Saccon"]
-repository = "https://github.com/rsaccon/koto-zed"
+repository = "https://github.com/koto-lang/koto-zed"
 
 [grammars.koto]
 repository = "https://github.com/koto-lang/tree-sitter-koto"
