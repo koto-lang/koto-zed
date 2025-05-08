@@ -4,6 +4,13 @@ version = "0.0.1"
 edition = "2021"
 publish = false
 
+authors = ["Roberto Saccon <rsaccon@gmail.com>"]
+description = "Support for Koto in Zed"
+keywords = ["zed", "extension", "scripting", "language", "koto"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/rsaccon/koto-zed"
+
 [lib]
 crate-type = ["cdylib"]
 
