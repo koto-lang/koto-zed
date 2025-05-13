@@ -1,5 +1,7 @@
 # koto-zed
-[Support for Koto in Zed](https://zed.dev/extensions?query=Koto)
+Support for Koto in Zed
+
+Published at [Zed Extension Gallery](https://zed.dev/extensions?query=Koto&filter=language-servers).
 
 ### Features
 - Diagnostics
