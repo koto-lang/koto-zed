@@ -1,5 +1,5 @@
 # koto-zed
-Support for Koto in Zed
+Support for [Koto](https://github.com/koto-lang/koto) in Zed
 
 Published at [Zed Extension Gallery](https://zed.dev/extensions?query=Koto&filter=language-servers).
 
