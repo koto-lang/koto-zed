@@ -1,5 +1,5 @@
 # koto-zed
-Support for Koto in Zed
+[Support for Koto in Zed](https://zed.dev/extensions?query=Koto)
 
 ### Features
 - Diagnostics
@@ -24,6 +24,4 @@ to enable it in the `lsp` section of your `settings.json`:
 ```
 
 ## Installation
-As Zed Dev Extension for now (once it is published to Zed extensions - PR at zed is currently awaiting to be merged, it can be selected to be installed right from within the editor).
-1. Download and unzip koto-zed: https://github.com/rsaccon/koto-zed/archive/refs/heads/main.zip
-2. Install Dev Extension (from Command Palette or Menu `Zed > Extensions`)
+Right from within Zed, for detailed platform-specific instructions see the [Zed documentation](https://zed.dev/docs/extensions/installing-extensions#installing-extensions).
